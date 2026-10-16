@@ -8,3 +8,10 @@ venv/
 .idea/
 *.log
 .pytest_cache/
+data/
+
+# Telethon sessions
+*.session
+*.session-journal
+*.session-wal
+*.session-shm
