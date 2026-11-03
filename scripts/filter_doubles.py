@@ -1,14 +1,17 @@
 import json
 from pathlib import Path
 
+from config import BASE_DIR
+
 # SOURCE_FILE - файл, в котором ищем дубли
 # EXISTING_FILE - файл, в котором проверяем наличие
 # OUTPUT_FILE - файл, в который сохраняем результат
 
-SOURCE_FILE = Path("data/Переходник канал/Переходник канал_from2026-10-07_to2026-10-10.json")
-EXISTING_FILE = Path("data/Мои файлики/Мои файлики_from2026-09-16_to2026-09-19.json")
-OUTPUT_FILE = Path("data/filtered") / f"Filtered_{SOURCE_FILE.name}"
-DUPLICATES_FILE = Path("data/duplicates") / f"Existing_{SOURCE_FILE.name}"
+
+SOURCE_FILE = BASE_DIR / "data/Переходник канал/Переходник канал_from2026-10-07_to2026-10-10.json"
+EXISTING_FILE = BASE_DIR /"data/Мои файлики/Мои файлики_from2026-09-16_to2026-09-19.json"
+OUTPUT_FILE = BASE_DIR / "data/filtered" / f"Filtered_{SOURCE_FILE.name}"
+DUPLICATES_FILE = BASE_DIR / "data/duplicates" / f"Existing_{SOURCE_FILE.name}"
 
 def load_json(filename):
     with open(filename, "r", encoding="utf-8") as f:
@@ -42,8 +45,8 @@ def main():
             added_files.add(key)
 
     # Создаём папку для фильтрованных и дубликатов
-    output_dir1 = Path("data/filtered")
-    output_dir2 = Path("data/duplicates")
+    output_dir1 = BASE_DIR/"data/filtered"
+    output_dir2 = BASE_DIR/"data/duplicates"
     output_dir1.mkdir(parents=True, exist_ok=True)
     output_dir2.mkdir(parents=True, exist_ok=True)
 

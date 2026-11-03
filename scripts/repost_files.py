@@ -5,11 +5,10 @@ from common.telegram_client import create_client
 
 from config import (
     SOURCE_CHAT,
-    TARGET_CHAT
+    TARGET_CHAT,
+    BASE_DIR
 )
-from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 # INPUT_FILE - файл список постов на репост
 INPUT_FILE = BASE_DIR / "data/filtered/Filtered_Переходник канал_from2026-10-07_to2026-10-10.json"
