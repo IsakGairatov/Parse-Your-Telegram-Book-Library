@@ -16,6 +16,11 @@ SOURCE_CHAT = os.environ["MyMiddleChannel"]
 if SOURCE_CHAT.lstrip("-").isdigit():
     SOURCE_CHAT = int(SOURCE_CHAT)
 
+TARGET_CHAT = os.environ["MyChannel"]
+
+if TARGET_CHAT.lstrip("-").isdigit():
+    TARGET_CHAT = int(TARGET_CHAT)
+
 DATE_FROM = "2013-08-01"
 DATE_TO = "2026-12-30"
 

@@ -1,6 +1,6 @@
 from telethon import TelegramClient
 
-from Collect_your_tg_library.config import API_ID, API_HASH, SESSION, BASE_DIR
+from config import API_ID, API_HASH, SESSION, BASE_DIR
 
 
 def create_client():
