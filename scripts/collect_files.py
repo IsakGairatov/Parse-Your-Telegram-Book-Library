@@ -10,7 +10,7 @@ from Collect_your_tg_library.config import (
     SOURCE_CHAT,
     DATE_FROM,
     DATE_TO,
-    OUTPUT_FILE,
+    OUTPUT_DIR,
 )
 
 async def main():
@@ -102,7 +102,7 @@ async def main():
             last_date = DATE_TO
 
         # Создаём папку с названием чата
-        output_dir = OUTPUT_FILE.parent / safe_chat_name
+        output_dir = OUTPUT_DIR / safe_chat_name
         output_dir.mkdir(parents=True, exist_ok=True)
 
         # Формируем имя JSON
