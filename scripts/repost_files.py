@@ -1,21 +1,24 @@
 import asyncio
 import json
-from datetime import datetime
-import re
 
 from common.telegram_client import create_client
-from common.file_types import is_book_file
 
 from config import (
     SOURCE_CHAT,
     TARGET_CHAT
 )
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # INPUT_FILE - файл список постов на репост
-INPUT_FILE = "data/filtered/Filtered_Переходник канал_from2026-10-07_to2026-10-10.json"
+INPUT_FILE = BASE_DIR / "data/filtered/Filtered_Переходник канал_from2026-10-07_to2026-10-10.json"
 
-# Стоп айди. Репост закончится когда дойдет до файла с этим айди
-idp = 10
+# Айди начала репоста
+idp = 0
+
+#Айди количества репостов. Id + cnt = айди последнего в очереди на репост. Поставь 0 если хочешь отправить все.
+cnt = 10
 
 async def main():
     client = create_client()
@@ -33,6 +36,9 @@ async def main():
         for item in files:
             if item["id"] < idp:
                 continue
+
+            if item["id"] > idp + cnt and cnt != 0:
+                break
 
             if item["id"] % 1000 == 0:
                 await asyncio.sleep(60)
