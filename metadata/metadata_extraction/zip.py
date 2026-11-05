@@ -12,12 +12,6 @@ from metadata.metadata_extraction.epub import extract_epub_metadata
 from metadata.metadata_extraction.fb2 import extract_fb2_metadata
 
 
-
-
-
-
-
-
 async def get_zip_fb2_metadata(client, message, entry):
     """
     Читает FB2 внутри ZIP частями.
