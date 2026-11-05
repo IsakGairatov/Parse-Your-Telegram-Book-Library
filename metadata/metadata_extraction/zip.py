@@ -2,11 +2,11 @@ import re
 import struct
 import zlib
 
-from config import ZIP_TAIL_SIZE, MAX_ZIP_TAIL_SIZE, ZIP_FB2_CHUNK_SIZE, MAX_ZIP_FB2_CHUNK_SIZE
-from download import download_part
-from metadata.common import get_zip_entries, parse_zip_entries, download_zip_entry
-from metadata.epub import extract_epub_metadata
-from metadata.fb2 import extract_fb2_metadata
+from metadata.metadata_config import ZIP_TAIL_SIZE, MAX_ZIP_TAIL_SIZE, ZIP_FB2_CHUNK_SIZE, MAX_ZIP_FB2_CHUNK_SIZE
+from metadata.download import download_part
+from metadata.metadata_extraction.common import get_zip_entries, parse_zip_entries, download_zip_entry
+from metadata.metadata_extraction.epub import extract_epub_metadata
+from metadata.metadata_extraction.fb2 import extract_fb2_metadata
 
 
 

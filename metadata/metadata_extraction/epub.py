@@ -2,7 +2,7 @@
 # EPUB
 # ============================================================
 import re
-from metadata.common import extract_tag_value, clean_text, get_zip_entries, download_zip_entry, format_datetime
+from metadata.metadata_extraction.common import extract_tag_value, clean_text, get_zip_entries, download_zip_entry, format_datetime
 
 
 def extract_epub_metadata(

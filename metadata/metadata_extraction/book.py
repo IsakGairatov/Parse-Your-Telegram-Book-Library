@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from fb2 import get_fb2_metadata
-from epub import get_epub_metadata
-from zip import get_zip_metadata
-from pdf import get_pdf_metadata
+from metadata.metadata_extraction.fb2 import get_fb2_metadata
+from metadata.metadata_extraction.epub import get_epub_metadata
+from metadata.metadata_extraction.zip import get_zip_metadata
+from metadata.metadata_extraction.pdf import get_pdf_metadata
 
 async def get_book_metadata(
     client,

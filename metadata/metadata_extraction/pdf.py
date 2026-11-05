@@ -4,8 +4,8 @@
 import re
 from pathlib import Path
 
-from download import download_part
-from metadata.common import clean_text
+from metadata.download import download_part
+from metadata.metadata_extraction.common import clean_text
 
 
 PDF_METADATA_CHUNK_SIZE = 32 * 1024

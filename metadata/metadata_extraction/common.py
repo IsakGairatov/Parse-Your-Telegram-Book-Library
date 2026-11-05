@@ -5,8 +5,8 @@ from datetime import datetime
 
 from telethon import TelegramClient
 
-from config import ZIP_TAIL_SIZE, MAX_ZIP_TAIL_SIZE
-from download import download_part
+from metadata.metadata_config import ZIP_TAIL_SIZE, MAX_ZIP_TAIL_SIZE
+from metadata.download import download_part
 
 
 def clean_text(text):

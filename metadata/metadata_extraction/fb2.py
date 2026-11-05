@@ -1,10 +1,10 @@
 import re
 from html import unescape
 
-from config import FB2_CHUNK_SIZE, MAX_FB2_CHUNK_SIZE
-from download import download_part
-from metadata.common import clean_text, decode_fb2
-from metadata.common import extract_tag_value
+from metadata.metadata_config import FB2_CHUNK_SIZE, MAX_FB2_CHUNK_SIZE
+from metadata.download import download_part
+from metadata.metadata_extraction.common import clean_text, decode_fb2
+from metadata.metadata_extraction.common import extract_tag_value
 
 
 def extract_fb2_author(

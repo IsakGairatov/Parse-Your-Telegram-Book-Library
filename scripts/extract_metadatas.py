@@ -6,7 +6,7 @@ from pathlib import Path
 from common.telegram_client import create_client
 from common.file_types import is_book_file
 
-from metadata.book import get_book_metadata
+from metadata.metadata_extraction.book import get_book_metadata
 
 from config import (
     SOURCE_CHAT
