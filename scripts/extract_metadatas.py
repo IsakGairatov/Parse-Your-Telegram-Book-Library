@@ -16,7 +16,7 @@ from config import (
 # CONFIG FIELDS
 # ============================================================
 
-DATE_FROM = "2026-10-05"
+DATE_FROM = "2026-09-05"
 DATE_TO = "2026-11-05"
 
 # ============================================================
@@ -206,7 +206,10 @@ async def main():
             # Book files only
             # ------------------------------------------------
 
-            if not is_book_file(message):
+            if not message.file:
+                continue
+
+            if not is_book_file(message.file.name):
                 continue
 
             filename = message.file.name or "Unknown"
