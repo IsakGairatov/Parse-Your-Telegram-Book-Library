@@ -3,10 +3,10 @@ import json
 from datetime import datetime
 import re
 
-from Collect_your_tg_library.common.telegram_client import create_client
-from Collect_your_tg_library.common.file_types import is_book_file
+from common.telegram_client import create_client
+from common.file_types import is_book_file
 
-from Collect_your_tg_library.config import (
+from config import (
     SOURCE_CHAT,
     DATE_FROM,
     DATE_TO,
