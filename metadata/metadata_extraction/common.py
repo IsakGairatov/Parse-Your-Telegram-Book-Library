@@ -246,6 +246,7 @@ def parse_zip_entries(tail, tail_offset):
 
     eocd_pos = find_eocd(tail)
 
+
     if eocd_pos == -1:
         return None
 
